@@ -1,6 +1,6 @@
 # Elite 101 PreWork
 
-This is a repository created by Tyler Herron
+This is a repository created by "Tyler Herron"
 
 
 ## Usage
