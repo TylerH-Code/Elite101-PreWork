@@ -1,7 +1,7 @@
 import clear
 import store
 
-Store = store.Store("McDon", "123 Main St", "555-555-5555")
+Store = store.Store("McDons", "123 Main St", "555-555-5555")
 print("Welcome to CHATBOT user")
 #Ask user for name
 while (True):

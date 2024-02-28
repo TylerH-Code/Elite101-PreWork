@@ -5,42 +5,43 @@ class Products:
 
   def __init__(self, id, name, price):
     self.id = str(id)
-    self.name =str( name)
-    self.price =float( price)
+    self.name = str(name)
+    self.price = float(price)
 
   def print_name(self):
+
     def spaces(num):
       return " " * num
+
     #formating float of price found on https://stackoverflow.com/questions/6149006/how-to-display-a-float-with-two-decimal-places
-    if(len(self.name)<=8):
-      self.name+=spaces(8-len(self.name))
+    if (len(self.name) <= 8):
+      self.name += spaces(8 - len(self.name))
     print(f"{self.id}  | {self.name} | {str('{:.2f}'.format(self.price))}")
 
-order=[
-  Products(1, "chicken",5.00),
-  Products(2, "beef", 6.00)
-]
+
+order = [Products(1, "chicken", 5.00),
+         Products(2, "beef", 6.00)]
+
 
 class Store:
 
-  def __init__(self,name,address,order):
+  def __init__(self, name, address, order):
     self.name = name
-    self.address =address
+    self.address = address
     self.order = order
 
   def print_name(self):
     clear.run()
-    print(f"\n{self.name}\n")
+    print(f"\nYou are ordering from {self.name}\n")
 
   def print_address(self):
     clear.run()
-    print(f"\n{self.address}\n")
-
+    print(f"\nYour current order is from {self.address}\n")
 
   def show_ui(self, username):
     clear.run()
     next = False
-    print(f"Welcome {username} to {self.name}")
+    print(f"Welcome {username} to {self.name} Ordering System\n")
     while next is False:
       ui_strings = ["show name", "show address", "Order", "Tracking", "Exit"]
       for menu_option in ui_strings:
@@ -65,13 +66,13 @@ class Store:
     for i in range(len(order)):
       order[i].print_name()
     print("")
-     
 
   def show_tracking_ui(self):
-    clear.run()
+
     def get_driver_location():
       print("driver on route")
-      #display location on map
+      #TODO: display location on map
+
     while True:
       print("1: Track Driver")
       print("2: Exit")
@@ -79,7 +80,7 @@ class Store:
       if (choice == "1"):
         clear.run()
         get_driver_location()
-      elif(choice=="2"):
+      elif (choice == "2"):
         clear.run()
         break
       else:

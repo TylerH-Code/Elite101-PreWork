@@ -7,5 +7,5 @@ def run():
   if (os.name == "posix"):
     os.system('clear')
   #checks if windows is being used
-  elif (os.name == "nt"):
+  if (os.name == "nt"):
     os.system('cls')
